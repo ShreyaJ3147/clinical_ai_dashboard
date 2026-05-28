@@ -274,6 +274,19 @@ def generate_insights(df: pd.DataFrame, context: dict, api_key: str) -> dict:
         if col in df.columns:
             cat_dist[col] = df[col].value_counts().head(5).to_dict()
 
+    # Convert numpy types to native Python so json.dumps works
+    def to_python(obj):
+        if isinstance(obj, dict):
+            return {k: to_python(v) for k, v in obj.items()}
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        return obj
+
+    stats    = to_python(stats)
+    cat_dist = to_python(cat_dist)
+
     prompt = f"""Given these stats from a {context.get('data_type','pharma')} dataset, 
 write one sharp insight for each of 4 dashboard panels. Be specific with numbers.
 
