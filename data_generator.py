@@ -218,8 +218,8 @@ def generate_supply_chain_data(n_shipments=250, seed=42):
 
 
 DATASET_REGISTRY = {
-    "clinical_trial":    {"fn": generate_clinical_trial_data,    "label": "Clinical Trial",        "icon": "🧬", "desc": "Phase II oncology study — lab values, adverse events, patient demographics"},
-    "pharmacovigilance": {"fn": generate_pharmacovigilance_data, "label": "Pharmacovigilance",     "icon": "⚠️", "desc": "Post-market adverse event reports — ICSR database"},
-    "manufacturing":     {"fn": generate_manufacturing_data,     "label": "Manufacturing QC",      "icon": "🏭", "desc": "Batch release records — yield, purity, deviations"},
-    "supply_chain":      {"fn": generate_supply_chain_data,      "label": "Supply Chain",          "icon": "🚚", "desc": "Drug distribution — cold chain, transit, expiry tracking"},
+    "clinical_trial":    {"fn": generate_clinical_trial_data,    "label": "Clinical Trial",     "icon": "[CT]", "desc": "Phase II oncology study - lab values, adverse events, patient demographics"},
+    "pharmacovigilance": {"fn": generate_pharmacovigilance_data, "label": "Pharmacovigilance",  "icon": "[PV]", "desc": "Post-market adverse event reports - ICSR database"},
+    "manufacturing":     {"fn": generate_manufacturing_data,     "label": "Manufacturing QC",   "icon": "[MFG]","desc": "Batch release records - yield, purity, deviations"},
+    "supply_chain":      {"fn": generate_supply_chain_data,      "label": "Supply Chain",       "icon": "[SC]", "desc": "Drug distribution - cold chain, transit, expiry tracking"},
 }
