@@ -1,7 +1,6 @@
 # ClinicalAI — Automated Trial Data Analyzer
 
 A portfolio project demonstrating a GenAI pipeline for clinical trial data analysis.
-Simulates a $2.2M ROI opportunity by automating what 30 Data Analysts do manually.
 
 ## What it does
 
@@ -21,13 +20,6 @@ Simulates a $2.2M ROI opportunity by automating what 30 Data Analysts do manuall
 3. Click **"Run AI Analysis Pipeline"**
 4. Explore the Anomaly Flags, Narrative, and Dashboard tabs
 5. Export results as CSV / TXT
-
-## Deploying to Streamlit Cloud (free)
-
-1. Push this folder to a GitHub repo
-2. Go to share.streamlit.io → New app → select your repo
-3. Add `ANTHROPIC_API_KEY` in the Secrets section
-4. Deploy → share the link
 
 ## Tech stack
 
