@@ -14,28 +14,6 @@ Simulates a $2.2M ROI opportunity by automating what 30 Data Analysts do manuall
 | Narrate | Claude writes an ICH E3-style regulatory narrative |
 | Dashboard | Interactive Plotly charts: ALT trends, AE distribution, severity heatmap |
 
-## Setup
-
-```bash
-# 1. Clone / download this folder
-cd clinical_ai_dashboard
-
-# 2. Create a virtual environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Set your Anthropic API key
-export ANTHROPIC_API_KEY=sk-ant-...   # or paste it in the sidebar
-
-# 5. Run the app
-streamlit run app.py
-```
-
-The app opens at http://localhost:8501
-
 ## Usage
 
 1. Click **"Use sample trial data"** to generate a synthetic Phase II oncology dataset
@@ -71,17 +49,3 @@ clinical_ai_dashboard/
 │   └── config.toml      # Dark theme
 └── README.md
 ```
-
-## Business context
-
-This prototype demonstrates the technical foundation for a $550K GenAI investment
-that projects a 4-year NPV of $2.2M at a 10% discount rate, with a ~7-month payback
-and ~120% IRR. See the full business case for details.
-
-## Notes
-
-- The synthetic dataset seeds intentional anomalies (hepatotoxicity signal in the
-  high-dose arm) so the pipeline has something real to detect and explain.
-- LLM calls use `claude-sonnet-4-6`. Swap for `claude-haiku-4-5` to reduce cost
-  during development.
-- This is a portfolio demo. Do not use for actual regulatory submissions.
